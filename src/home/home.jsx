@@ -16,7 +16,7 @@ const Home = () => {
             <div className='port-pic'>
             </div>
             <button className='resume'>
-            <a href={pdf} download>
+            <a href={pdf} download="Ayandele Oreoluwa-CV">
                 Download Resume</a></button>
         
             <Link to='./about/' className='links'>

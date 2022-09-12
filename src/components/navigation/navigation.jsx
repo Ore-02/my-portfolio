@@ -24,8 +24,10 @@ const Navigation = () => {
     const NavOut = () => {
         if (isNavOpen.nav === "close-nav") {
             setIsNavOpen({nav: "open-nav"})
+            document.body.style.overflow = "none"
         } else {
             setIsNavOpen({nav: "close-nav"})
+            document.body.style.overflow = ""
         }
     }
 
