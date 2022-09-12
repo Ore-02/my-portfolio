@@ -16,7 +16,7 @@ const About = () => {
         I am seeking for an entry-level or internship 
         opportunity where I can continue to learn and 
         grow my skills as a web developer. Feel 
-        free to connect with me, my DMs is always open!
+        free to connect with me, my DM is always open!
         </p>
 
         <Link to='../projects' className='links'>
