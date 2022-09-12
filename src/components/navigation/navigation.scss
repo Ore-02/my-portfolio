@@ -1,0 +1,204 @@
+@import '../../mixins';
+
+.header {
+    width: 100%;
+    height: 7.125rem;
+    padding: 2.9375rem 2.1876rem;
+    padding-right: 5rem;
+    @include breakpoint-down(medium) {
+        height: 3.125rem;
+        padding: 0.9375rem 1.1876rem;
+    }
+    .navigation {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: flex-end;
+       
+       .nav-links {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 0.125rem;
+                bottom: -0.5rem;
+                left: 0;
+                background-color: #E2A176;
+                transform-origin: bottom right;
+                transition: transform 300ms ease-out;
+              }
+              
+              &:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
+
+              &:hover {
+                color: #E2A176;
+            }
+
+            &.active{
+                color: #E2A176;
+            }
+        }
+       
+       }
+    }
+    &.close-nav {
+        .for-mobile {
+            overflow: hidden;
+            @include breakpoint-down(medium) {
+                &.for-mobile {
+                    .nav-link {
+                        display: none;
+                        // visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open-nav {
+       @include breakpoint-down(medium) {
+        .overlay {
+        position: fixed;
+        padding: 1.28125rem;
+        top: 3.2rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        background-color: rgb(52, 30, 15, 0.96);    
+        }
+       }
+        
+        .for-mobile {
+            position: relative;
+            
+            .nav-links {
+                
+                a {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 0.125rem;
+                        bottom: -0.5rem;
+                        left: 0;
+                        background-color: #E2A176;
+                        transform-origin: bottom right;
+                        transition: transform 300ms ease-out;
+                      }
+                      
+                      &:hover:after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                      }
+
+                    
+                }
+                @include breakpoint-down(medium) {
+                    &.for-mobile {
+                        overflow: hidden;
+                        letter-spacing: 0.125rem;
+                        position: fixed;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: auto;
+                        top: 50%;
+                        left: 50%;
+                        text-transform: uppercase;
+                        transform: translate(-50%,-40%);
+                        z-index: 5;
+                        .nav-link {
+                            color: whitesmoke;
+                            font-weight: 700;
+                            
+                            // margin: auto;
+                            margin-bottom: 3.4375rem;
+                            &:first-child {
+                                margin-top: 0.9375rem;
+                            }
+                            &:hover {
+                                font-weight: 700;
+                                color: #E2A176;
+                            }
+
+                            &.active{
+                                color: #E2A176;
+                            }
+
+                            &.active:after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                transform: scaleX(1);
+                                height: 0.125rem;
+                                bottom: -0.5rem;
+                                left: 0;
+                                background-color: #E2A176;
+                              }
+
+                            
+                            
+                            
+                        }
+                    }
+                }
+            }
+            
+        
+        }
+    }
+   
+   
+    @include breakpoint-down(medium) {
+        .hamburger { //hamburger/ Mobile Menu
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-left: 95%;
+            cursor: pointer;
+            > span {
+                position: relative;
+                width: 24px;
+                border-radius: 20%;
+                height: 2px;
+                background-color: whitesmoke;
+                transition: all 300ms ease-in-out;
+                transform-origin: 3px 1px;
+    
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+                
+            }
+
+            &.open-nav {
+                > span {
+                    &:first-child  {
+                        transform: rotate(50deg);
+                    }
+                    &:nth-child(2)  {
+                        opacity: 0;
+                    }
+                    &:last-child  {
+                        transform: rotate(-50deg);
+                    }   
+                }
+               
+            }
+        } 
+       
+      }
+    
+}

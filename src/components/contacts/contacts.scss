@@ -1,0 +1,208 @@
+@import '../../mixins';
+
+
+.contacts-container {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    .links {
+      margin-top: 1.25rem;
+      width: 15.375rem;
+      display: flex;
+      // font-size: 12px;
+      letter-spacing: 0.1125rem;
+
+      &:hover {
+          text-decoration: underline;
+          color: #E2A176;
+      }
+  }
+
+    @include breakpoint-down(medium) {
+      margin: 0 2.2rem;
+      padding: 3.125rem 0;
+    }
+
+    p {
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+    .cont-container {
+      position: relative;
+      margin: 0;
+      margin-top: 40px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      grid-gap: 30px;
+
+      .box {
+        box-shadow: 0px 5px 8px 3px #934f1e80;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;    
+
+        svg {
+          margin: 2px;
+        }
+
+        h4 {
+          margin: 1px;
+        }
+
+        h5 {
+        }
+
+        p {
+          cursor: pointer;
+          font-size: 14px;
+          margin-top: 25px;
+          a{
+            &:hover {
+              text-decoration: underline;
+              color: #E2A176;
+          }
+          }
+        }
+      }
+
+      
+    }
+
+//     .form-container {
+        // position: relative;
+        // margin: 0;
+        // margin-top: 40px;
+        // width: 90%;
+       
+      
+//         .form-input {
+//           background: none;
+//           color: whitesmoke;
+//           font-size: 15px;
+//           padding: 15px 5px;
+//           display: block;
+//           width: 100%;
+//           border-radius: 0;
+//           border: 1px solid #E2A176;
+//           // margin: 0px 0;
+//           &:not(:first-child) {
+//             margin-top: 40px;
+//           }
+
+        
+      
+//           &:focus {
+//           outline: none;
+//           border: 1px solid whitesmoke;
+          
+//           }
+     
+//         }
+      
+//         input[type='password'] {
+//           letter-spacing: 0.3em;
+//         }
+
+//         textarea {
+//           background: transparent;
+//           width: 100%;
+//           color: whitesmoke;
+//           margin-top: 40px;
+//           padding: 15px 5px;
+//           height: 200px;
+//           font-size: 15px;
+//           border: 1px solid #E2A176;
+
+//           &:focus {
+//             outline: none;
+//             border: 1px solid whitesmoke;
+            
+//             }
+        
+//       }
+//     }
+
+//     @include breakpoint-down(medium) {
+//         margin: 0 2.2rem;
+//         padding: 3.125rem 0;
+
+//         .form-container {
+        
+//             margin: 0;
+//             margin-top: 40px;
+//             width: 100%;
+            
+          
+//             .form-input {
+//               background: none;
+//               color: whitesmoke;
+//               font-size: 15px;
+//               padding: 15px 5px;
+//               display: block;
+//               width: 100%;
+//               border-radius: 0;
+//               border: 1px solid #E2A176;
+//               // margin: 0px 0;
+//               &:not(:first-child) {
+//                 margin-top: 40px;
+//               }
+
+            
+          
+//               &:focus {
+//               outline: none;
+//               border: 1px solid  whitesmoke;
+              
+//               }
+         
+//             }
+
+//             textarea {
+//                 background: transparent;
+//                 width: 100%;
+//                 margin-top: 40px;
+//                 padding: 15px 5px;
+//                 height: 200px;
+//                 font-size: 15px;
+//                 border: 1px solid #E2A176;
+
+//                 &:focus {
+//                   outline: none;
+//                   border: 1px solid whitesmoke;
+                  
+//                   }
+              
+//             }
+
+            
+          
+//         }
+
+//     }
+
+//     .resume {
+//         margin-top: 1.25rem;
+//         color: whitesmoke;
+//         background-color: #341E0F;
+//        border-radius: 7px;
+//         padding: 0.825rem;
+//         border: 1px solid #E2A176;
+//         font-size: 0.95rem;
+//         letter-spacing: 1px;
+//         cursor: pointer;
+//         transition: all 150ms ease-in-out;
+
+//         &:hover {
+//             background-color: #934F1E;
+//         }
+//         &:focus {
+//             transform: scale(0.98);
+//         }
+        
+//     }
+}

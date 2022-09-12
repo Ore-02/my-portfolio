@@ -1,0 +1,68 @@
+@import '../../mixins';
+
+
+.about-container {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+    
+    p {
+        line-height: 2;
+        letter-spacing: 2px;
+        font-weight: 300
+    }
+
+    .picture {
+        background-image: url('../../assests/portpic.jpeg');
+        height: 200px;
+        width: 180px;
+        float: left;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+        border: 4px solid #E2A176;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+  
+        .links {
+            margin-top: 1.25rem;
+            width: 15.375rem;
+            display: flex;
+            // font-size: 12px;
+            letter-spacing: 0.1125rem;
+
+            &:hover {
+                text-decoration: underline;
+                color: #E2A176;
+            }
+            svg {
+                margin-top: 0.7375rem; 
+            }
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+
+            &:hover svg path {
+              fill: #E2A176;  
+            }
+        }
+
+    @include breakpoint-down(medium) {
+        margin: 0 2.2rem;
+        padding: 3.125rem 0;
+
+        .picture {
+            border-radius: 10%;
+            float: none;
+            margin: auto;
+        }
+
+        
+    }
+}

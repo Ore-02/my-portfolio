@@ -1,0 +1,133 @@
+@import '../mixins';
+
+.home-container {
+    position: relative;
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+    h1 {
+        font-size: 2.5125rem;
+        font-weight: 700;
+        letter-spacing: 0.125rem;
+    }
+
+    h3 {
+        // margin: 0;
+        // padding: 0;
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.9625rem;
+        letter-spacing: 0.125rem;
+    }
+
+    .resume {
+        margin-top: 1.25rem;
+        color: whitesmoke;
+        background-color: #341E0F;
+       border-radius: 7px;
+        padding: 0.825rem;
+        border: 1px solid #E2A176;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            background-color: #934F1E;
+        }
+        &:focus {
+            transform: scale(0.98);
+        }
+        
+    }
+
+    .links {
+        margin-top: 1.25rem;
+        width: 19.375rem;
+        display: flex;
+        font-size: 14px;
+        letter-spacing: 0.3125rem;
+
+        &:hover {
+            text-decoration: underline;
+            color: #E2A176;
+        }
+        svg {
+            margin-top: 0.4375rem; 
+        }
+        svg path {
+            transition: fill 150ms ease-in-out;
+        }
+
+        &:hover svg path {
+          fill: #E2A176;  
+        }
+    }
+
+    @include breakpoint-down(medium) {
+        // margin: 0px 1.875rem;
+        // margin-right: 1.875rem;
+        // margin-top: 5.6325rem;
+        margin: 0 2.2rem;
+        padding: 8.125rem 0;
+
+        h1 {
+            font-size: 2.3125rem;
+            font-weight: 700;
+            letter-spacing: 0.125rem;
+        }
+
+        h3 {
+            // margin: 0;
+            // padding: 0;
+            text-align: left;
+            font-weight: 400;
+            font-size: 1.5625rem;
+            letter-spacing: 0.125rem;
+        }
+
+        .resume {
+            margin-top: 1.25rem;
+            color: whitesmoke;
+            background-color: #341E0F;
+           border-radius: 7px;
+            padding: 0.625rem;
+            border: 1px solid #E2A176;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                background-color: #934F1E;
+            }
+            &:focus {
+                transform: scale(0.98);
+            }
+            
+        }
+
+        .links {
+            margin-top: 1.25rem;
+            width: 15.375rem;
+            display: flex;
+            // font-size: 12px;
+            letter-spacing: 0.1125rem;
+
+            &:hover {
+                text-decoration: underline;
+                color: #E2A176;
+            }
+            svg {
+                margin-top: 0.2375rem; 
+            }
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+
+            &:hover svg path {
+              fill: #E2A176;  
+            }
+        }
+    }
+
+}
