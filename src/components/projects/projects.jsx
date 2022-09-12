@@ -77,7 +77,6 @@ const Projects = () => {
                             </div>
                         </div>
                         <div className="btn-container">
-                            <a href="ayanle.netlify.com" target="_blank"><button className='resume'>Live Demo</button></a>
                             <a href="https://github.com/Ore-02/my-portfolio" target="_blank"><button className='resume'>Source Code</button></a>
                         </div>
                     </div>
